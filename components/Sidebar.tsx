@@ -7,14 +7,8 @@ import {
   List,
   ListItemIcon,
   ListItemText,
-  IconButton,
-  AppBar,
   Toolbar,
   ListItemButton,
-  Avatar,
-  Menu,
-  MenuItem,
-  Typography,
 } from '@mui/material';
 import {
   Menu as MenuIcon,
@@ -23,7 +17,6 @@ import {
   PieChart as PieChartIcon,
   ScatterPlot as ScatterPlotIcon,
   Info as InfoIcon,
-  AccountCircle as AccountCircleIcon,
 } from '@mui/icons-material';
 
 import { useSidebarContext } from '../contexts/SidebarContext';

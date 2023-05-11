@@ -32,8 +32,6 @@ const AppBar: React.FC<AppBarProps> = ({ onMenuButtonClick }) => {
     null
   );
 
-  const [searchOpen, setSearchOpen] = useState<boolean>(false);
-
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };

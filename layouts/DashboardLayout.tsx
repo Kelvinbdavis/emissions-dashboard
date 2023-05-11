@@ -1,28 +1,18 @@
 // layouts/DashboardLayout.tsx
 
 import { ReactNode, useState } from 'react';
-import {
-  Box,
-  Toolbar,
-  Typography,
-  Container,
-  Avatar,
-  Menu,
-  MenuItem,
-} from '@mui/material';
-import { AccountCircle as AccountCircleIcon } from '@mui/icons-material';
+import { Box, Toolbar, Typography, Container } from '@mui/material';
 
 import Sidebar from '../components/Sidebar';
 import AppBar from '../components/AppBar';
-import { useSidebarContext } from '../contexts/SidebarContext';
+import { useAppStore } from '../store';
 
 interface DashboardLayoutProps {
   children: ReactNode;
 }
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
-  const { drawerOpen, setDrawerOpen } = useSidebarContext();
-
+  const { drawerOpen, setDrawerOpen } = useAppStore(state => state.drawer);
 
   return (
     <Box sx={{ display: 'flex' }}>

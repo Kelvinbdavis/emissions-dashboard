@@ -19,7 +19,7 @@ import {
   Info as InfoIcon,
 } from '@mui/icons-material';
 
-import { useSidebarContext } from '../contexts/SidebarContext';
+import { useAppStore } from '../store';
 
 const drawerWidth = 240;
 
@@ -33,12 +33,15 @@ const menuItems = [
 
 const Sidebar = () => {
   const router = useRouter();
-  const { drawerOpen, setDrawerOpen } = useSidebarContext();
+  const { drawerOpen, setDrawerOpen } = useAppStore((state) => state.drawer);
 
   return (
     <Box>
       <Drawer
-        variant="permanent"
+        variant="temporary"
+        anchor="left"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
         sx={{
           width: drawerOpen ? drawerWidth : 56,
           flexShrink: 0,

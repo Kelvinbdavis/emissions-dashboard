@@ -15,16 +15,26 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   const { drawerOpen, setDrawerOpen } = useAppStore(state => state.drawer);
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <AppBar onMenuButtonClick={() => setDrawerOpen(!drawerOpen)} />
       <Sidebar />
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, p: 3, marginLeft: 20 }}>
         <Toolbar />
-        <Container maxWidth="lg">{children}</Container>
+        <Container
+          maxWidth="lg"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          {children}
+        </Container>
       </Box>
       <Box component="footer" sx={{ flexGrow: 1, p: 3 }}>
         <Typography variant="body2" color="textSecondary" align="center">
-          Your Footer Content Here
+          Footer
         </Typography>
       </Box>
     </Box>

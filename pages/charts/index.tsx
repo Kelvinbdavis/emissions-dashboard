@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
 import DashboardLayout from '../../layouts/DashboardLayout';
+import DataViewLayout from '../../layouts/DataViewLayout';
 
-const Charts: NextPage = () => {
-  return (
-    <DashboardLayout>
-       <h1>Chart Page</h1>
-    </DashboardLayout>
-  );
-};
+const ChartsPage = () => (
+  <DashboardLayout>
+    <DataViewLayout title="Charts">
+      <h1>Chart Page</h1>
+    </DataViewLayout>
+  </DashboardLayout>
+);
 
-export default Charts;
+export default ChartsPage;

@@ -1,4 +1,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 import type { AppProps } from 'next/app';
 
@@ -16,7 +19,9 @@ const theme = createTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <main className={inter.className}>
+        <Component {...pageProps} />
+      </main>
     </ThemeProvider>
   );
 }

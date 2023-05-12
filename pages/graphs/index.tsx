@@ -4,7 +4,9 @@ import DashboardLayout from '../../layouts/DashboardLayout';
 const Graphs: NextPage = () => {
   return (
     <DashboardLayout>
-       <h1>Graphs Page</h1>
+      <div>
+        <img src="/Co2_carbon_dioxide_icon.png" alt="My Image" />
+      </div>
     </DashboardLayout>
   );
 };
